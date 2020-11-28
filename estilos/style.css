@@ -43,6 +43,10 @@ a:hover {
 	margin: 40px 15%;
 }
 
+.margin1{
+	margin: 40px 10% 40px 20%;
+}
+
 .margin2 {
 	margin: 40px 20%;
 }
@@ -68,13 +72,19 @@ a:hover {
 	color: #5c5b66;
 }
 
+.work__technologies {
+	color: #5c5b66;
+	margin-bottom: 10px;
+	font-size: .9rem;
+}
+
 .section::before {
 	content: '';
 	position: absolute;
 	height: 5px;
 	bottom: 0;
 	width: 0%;
-	background-color: red;
+	background-color: #7068A8;
 	border-radius: 25px;
 	transition: all .3s ease-in-out;
 }
@@ -140,6 +150,40 @@ header p {
 
 .services {
 	position: relative;
+}
+
+.work__div {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.work__div .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5% 3%;
+	margin: 0px 0px 20px 0px;
+}
+
+.work__div .icon {
+	align-self: center;
+}
+
+.work__technologies-div {
+	display: flex;
+}
+
+.bxl-html5 {
+	color: #e34f26;
+}
+
+.bxl-javascript {
+	color: #f7df1e;
+}
+
+.bxl-css3 {
+	color:#00a4e4;
 }
 
 .services__box {
@@ -217,6 +261,10 @@ header p {
 	.margin {
 		margin: 40px 10%;
 	}
+
+	.margin1 {
+		margin: 40px 5% 40px 15%;
+	}
 	
 	.margin2 {
 		margin: 40px 15%;
@@ -233,6 +281,7 @@ header p {
 
 @media only screen and (max-width: 500px){
 	.margin,
+	.margin1,
 	.margin2,
 	.margin3 {
 		margin: 40px 10%;
@@ -314,8 +363,12 @@ header p {
 	.marker {
 		right: -10%;
 	}
-
-
+	
+	.work__div .container {
+		width: 100%;
+		padding: 5% 3%;
+		margin: 0px 0px 20px 0px;
+	}
 }
 
 @media only screen and (max-width: 400px){
