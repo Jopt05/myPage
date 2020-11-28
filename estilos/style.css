@@ -1,0 +1,325 @@
+:root{
+	--BgContainer: #EDE8FF;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #E8E5CA;
+}
+
+* {
+	font-family: 'Rubik', sans-serif;
+}
+
+p,
+h1 {
+	display: inline-block;
+	margin: 0;
+}
+
+h1 {
+	line-height: .9;
+}
+
+a {
+	align-self: flex-start;
+	text-decoration: none;
+	padding: 10px 30px;
+	border-radius: 25px;
+	background-color: #7068A8;
+	color: white;
+	transition: all .3s ease-in-out;
+}
+
+a:hover {
+	background-color: #60598f;
+}
+
+.margin {
+	margin: 40px 15%;
+}
+
+.margin2 {
+	margin: 40px 20%;
+}
+
+.margin3 {
+	margin: 40px 20% 40px 10%;
+}
+
+.title {
+	margin-bottom: 30px;
+	font-size: 60px;
+	position: relative;
+}
+
+.subtitle {
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.plainText {
+	margin-bottom: 10px;
+	line-height: 1.5;
+	color: #5c5b66;
+}
+
+.section::before {
+	content: '';
+	position: absolute;
+	height: 5px;
+	bottom: 0;
+	width: 0%;
+	background-color: red;
+	border-radius: 25px;
+	transition: all .3s ease-in-out;
+}
+
+.section:hover::before {
+	width: 100%;
+}
+
+.marker {
+	position: absolute;
+	right: 0;
+	top: 100px;
+	transform: rotate(90deg);
+	margin-bottom: 0;
+}
+
+.icon {
+	align-self: flex-start;
+	margin-bottom: 30px;
+	padding: 15px;
+	background-color: #D1CAE8;
+	font-size: 2rem;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 5% 8%;
+	background: var(--BgContainer);
+	border-radius: 15px;
+}
+
+header {
+	display: flex;
+	align-items: center;
+}
+
+header p {
+	margin-left: 20%;
+}
+
+.header__logo {
+	height: 50px;
+	width: 50px;
+	object-fit: contain;
+}
+
+.hero {
+	display: flex;
+}
+
+.hero__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 10%;
+}
+
+.hero__image{
+	width: 350px;
+	height: 400px;
+	object-fit: contain;
+}
+
+.services {
+	position: relative;
+}
+
+.services__box {
+	display: flex;
+	align-items: center;
+	position: relative;
+	transform: translateX(-200%);
+}
+
+.services__box-1 {
+	display: flex;
+	flex-direction: column;
+}
+
+.services__box .imgS {
+	width: 250px;
+	height: 250px;
+	object-fit: contain;
+	margin-left: auto;
+}
+
+.inverted .imgS {
+	order: 1;
+	margin-left: 0;
+}
+
+.inverted .services__box-1 {
+	order: 2;
+	margin-left: auto;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.contact__image {
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+    background-color: transparent;
+    transform: translateY(-65%);
+}
+
+.contact .services__box a {
+	align-self: center;
+	margin-left: auto;
+}
+
+.contact .services__box {
+	margin-bottom: 50px;
+}
+
+.contact__social {
+	display: flex;
+	justify-content: center;
+	margin: 40px 0px;
+}
+
+.contact__social a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border-radius: 50%;
+	font-size: 2rem;
+	margin-right: 2%;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 500px){
+	.margin {
+		margin: 40px 10%;
+	}
+	
+	.margin2 {
+		margin: 40px 15%;
+	}
+	
+	.margin3 {
+		margin: 40px 15% 40px 5%;
+	}	
+
+	.container {
+		padding: 4% 6%;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.margin,
+	.margin2,
+	.margin3 {
+		margin: 40px 10%;
+	}
+
+	.services{
+		display: flex;
+		flex-direction: column;
+	}
+
+	header {
+		justify-content: center;
+	}
+
+	header p {
+		display: none;
+	}
+
+	.services__box,
+	.hero {
+		flex-direction: column;
+	}
+
+	.hero__text {
+		padding-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.hero__image{
+		width: 200px;
+		height: 200px;
+		object-fit: contain;
+	}
+
+	.inverted img {
+		margin-bottom: 30px;
+	}
+
+	.services__box,
+	.hero,
+	.services__box-1 {
+		align-items: center;
+	}
+
+	.services__box .imgS {
+		width: 200px;
+		height: 200px;
+		object-fit: contain;
+		margin-left: 0;
+	}
+
+	.icon {
+		align-self: center;
+	}
+
+	h1, p {
+		text-align: center;
+	}
+
+	a {
+		align-self: center;
+	}
+
+	.contact .services__box a {
+		align-self: center;
+		margin-left: 0;
+	}
+
+	.container {
+		padding: 8% 8%;
+	}
+
+	.contact__social {
+		display: flex;
+		justify-content: space-between;
+		margin: 40px 8%;
+	}
+
+	.marker {
+		right: -10%;
+	}
+
+
+}
+
+@media only screen and (max-width: 400px){
+	.container {
+		padding: 12% 8%;
+	}
+}
