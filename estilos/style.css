@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-	background-color: #60598f;
+	background-color: #d53013;
 }
 
 .margin {
@@ -153,6 +153,11 @@ header p {
 }
 
 .work__div .icon {
+	align-self: center;
+}
+
+.work__div .container a {
+	margin: 10px 0px 0px 0px;
 	align-self: center;
 }
 
