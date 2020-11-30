@@ -119,8 +119,18 @@
 				<p class="title">Keep in touch</p>
 				<p class="plainText">Leave me a message and i'll contact as soon as posible</p>
 			</div>
-			<a target="_blank" href="mailto:jopt0598@hotmail.com">LET'S CHAT</a>
+			<a href="#formContact" class="goToForm">LET'S CHAT</a>
 		</div>
+		<form method="post" action="/scripts/contact.php" class="container form__box margin2" id="formContact">
+			<p class="subtitle">Send me a message!</p>
+			<label for="name">Name</label>
+			<input type="text" name="" id="name" name="visitor_name" required>
+			<label for="mail">Email</label>
+			<input type="email" id="mail" name="visitor_email" required>
+			<label for="message">Message</label>
+			<textarea name="" id="message" name="visitor_message"  cols="30" rows="10" width="100%" required></textarea>
+			<button>Submit</button>
+		</form>
 		<div class="contact__social">
 			<a target="_blank" href="https://github.com/Jopt05"><i class='social bx bxl-github'></i></a>
 			<a target="_blank" href="https://www.facebook.com/PuentesTorres5/"><i class='social bx bxl-facebook'></i></a>
