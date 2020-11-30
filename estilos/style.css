@@ -27,6 +27,7 @@ h1 {
 }
 
 a {
+	position: relative;
 	align-self: flex-start;
 	text-decoration: none;
 	padding: 10px 30px;
@@ -254,6 +255,58 @@ header p {
 	text-align: center;
 	margin: 20px 0px;
 }
+
+
+.link__container {
+	position: relative;
+  }
+  
+.link__text {
+	position: relative;
+	transition: all .5s ease-in-out;
+}
+
+.link__icon {
+	font-size: 1rem;
+	position: absolute;
+	transition: all .5s ease-in-out;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+a:hover .link__icon {
+	animation: getIn .5s ease-in-out forwards;
+}
+
+a:hover .link__text {
+	animation: getOut .5s ease-in-out forwards;
+}
+
+@keyframes getIn {
+	from {
+		opacity: 0;
+		top: 100%;
+	}
+
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes getOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+}
+
 
 @media only screen and (max-width: 1024px) and (min-width: 500px){
 	.margin {
